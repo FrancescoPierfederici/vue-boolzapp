@@ -113,6 +113,13 @@ body{
      border: 1px solid rgba(128, 128, 128, 0.287);
      
  }
+ .bottom-bar-right input{
+    border-radius: 20px;
+    padding: 15px;
+    width: 700px;
+    border:none;
+   
+ }
  .img-container{
      display: flex;
      padding: 15px 10px;
@@ -199,3 +206,12 @@ body{
      color:grey;
 
  }
+ 
+ .container-button-bar{
+     display: flex;
+     width: 100%;
+     justify-content: space-around;
+     align-items: center;
+     padding-top:10px;
+ }
+ 
