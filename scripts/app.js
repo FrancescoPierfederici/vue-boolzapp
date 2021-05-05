@@ -8,9 +8,13 @@ const app = new Vue({
     methods:{
        onUserClick(user){
             this.activeChat = user;
+        },
+        formatTime(stringDate){
+            return moment(stringDate, "DD/MM/YYYY HH:mm:ss").format("HH:mm")
+
         }
     },
     mounted(){
         this.activeChat = this.usersList[0];
-    }
+    },
 })

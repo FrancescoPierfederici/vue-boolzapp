@@ -231,10 +231,17 @@ body{
  .message{
      padding:15px;
      border-radius:15px;
-     
+     position: relative;
      margin-top: 10px;
      display: inline-block;
      flex-grow:0;
+ }
+ .time{
+     position: absolute;
+     color: rgb(185, 185, 185);
+     bottom:4px;
+     font-size: 8px;
+     right:10px;
  }
  .bgActive{
      background-color: rgb(189, 184, 184);

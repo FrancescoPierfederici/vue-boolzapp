@@ -164,7 +164,7 @@ const globalUsersList = [
         ],
     },
     {
-        name: 'Michele',
+        name: 'Francesco',
         avatar: '_9',
         visible: true,
         messages: [
@@ -186,7 +186,7 @@ const globalUsersList = [
         ],
     },
     {
-        name: 'Fabio',
+        name: 'Flavio',
         avatar: '_10',
         visible: true,
         messages: [
@@ -207,7 +207,7 @@ const globalUsersList = [
             }
         ],
     }, {
-        name: 'Samuele',
+        name: 'Florian',
         avatar: '_11',
         visible: true,
         messages: [
@@ -229,7 +229,7 @@ const globalUsersList = [
         ],
     },
     {
-        name: 'Giovanni',
+        name: 'Achille',
         avatar: '_12',
         visible: true,
         messages: [

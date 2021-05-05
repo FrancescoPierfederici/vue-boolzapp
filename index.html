@@ -54,8 +54,8 @@
                     <i class="fas fa-search search-absolute"></i>
                 </div>
                 <ul class="list-container ">
-                    <li class="padd-bd flex"
-                    :class="{ bgActive: user.avatar === activeChat.avatar}" v-for="(user,index) in usersList" :key="user.id "@click="onUserClick(user)">
+                    <li class="padd-bd flex" :class="{ bgActive: user.avatar === activeChat.avatar}"
+                        v-for="(user,index) in usersList" :key="user.id " @click="onUserClick(user)">
                         <img class="imgSize" :src="'imgs/avatar'+ user.avatar + '.jpg'" alt="">
                         <div>
                             <h4 style="padding-left:10px;padding-top:10px;">{{user.name }}</h4>
@@ -70,7 +70,8 @@
             <div class=" containerRight">
                 <div class="top-bar-right">
                     <div class="img-container">
-                        <img class="imgSize" :src="'imgs/avatar'+ activeChat.avatar + '.jpg'"  v-if="activeChat" alt="avatar">
+                        <img class="imgSize" :src="'imgs/avatar'+ activeChat.avatar + '.jpg'" v-if="activeChat"
+                            alt="avatar">
                         <div class="text" v-if="activeChat">
                             <h4> {{activeChat.name}} </h4> <br>
                             <p style="color: grey;">Ultimo accesso oggi alle 9.18</p>
@@ -90,8 +91,13 @@
                 </div>
                 <div class="message-background">
                     <!-- <div class="containerMessage"> -->
-                        <div  class="message received">      </div>
-                        <div class="message sent">fsdfsf</div>
+                    <div class="message "
+                        :class="{received: message.status === 'received', sent: message.status === 'sent' } "
+                        v-for="(message,index) in activeChat.messages  " :key="index"> {{message.text}}
+                        <div class="time">{{ formatTime(message.date) }} </div>
+                    </div>
+
+
                     <!-- </div> -->
 
                 </div>
