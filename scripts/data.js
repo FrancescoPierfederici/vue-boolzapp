@@ -65,7 +65,7 @@ const globalUsersList = [
         ],
     },
     {
-        name: 'Luisa',
+        name: 'Giovanni',
         avatar: '_4',
         visible: true,
         messages: [
@@ -83,7 +83,7 @@ const globalUsersList = [
     },
     {
         name: 'Michele',
-        avatar: '_1',
+        avatar: '_5',
         visible: true,
         messages: [
             {
@@ -105,7 +105,7 @@ const globalUsersList = [
     },
     {
         name: 'Fabio',
-        avatar: '_2',
+        avatar: '_6',
         visible: true,
         messages: [
             {
@@ -126,7 +126,7 @@ const globalUsersList = [
         ],
     }, {
         name: 'Samuele',
-        avatar: '_3',
+        avatar: '_7',
         visible: true,
         messages: [
             {
@@ -147,8 +147,8 @@ const globalUsersList = [
         ],
     },
     {
-        name: 'Luisa',
-        avatar: '_4',
+        name: 'Giovanni',
+        avatar: '_8',
         visible: true,
         messages: [
             {
@@ -165,7 +165,7 @@ const globalUsersList = [
     },
     {
         name: 'Michele',
-        avatar: '_1',
+        avatar: '_9',
         visible: true,
         messages: [
             {
@@ -187,7 +187,7 @@ const globalUsersList = [
     },
     {
         name: 'Fabio',
-        avatar: '_2',
+        avatar: '_10',
         visible: true,
         messages: [
             {
@@ -208,7 +208,7 @@ const globalUsersList = [
         ],
     }, {
         name: 'Samuele',
-        avatar: '_3',
+        avatar: '_11',
         visible: true,
         messages: [
             {
@@ -229,8 +229,8 @@ const globalUsersList = [
         ],
     },
     {
-        name: 'Luisa',
-        avatar: '_4',
+        name: 'Giovanni',
+        avatar: '_12',
         visible: true,
         messages: [
             {

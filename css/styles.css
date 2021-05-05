@@ -229,12 +229,15 @@ body{
      
  } */
  .message{
-     padding:20px;
-     border-radius:20px;
+     padding:15px;
+     border-radius:15px;
      
      margin-top: 10px;
      display: inline-block;
      flex-grow:0;
+ }
+ .bgActive{
+     background-color: rgb(189, 184, 184);
  }
  .received{
      justify-content:flex-start;

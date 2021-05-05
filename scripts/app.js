@@ -2,12 +2,15 @@ const app = new Vue({
     el: "#app",
     data: {
         usersList: globalUsersList,
-        activeChat : 0,
+        activeChat : null,
         
     },
     methods:{
-        activeChatTwo(){
-
+       onUserClick(user){
+            this.activeChat = user;
         }
+    },
+    mounted(){
+        this.activeChat = this.usersList[0];
     }
 })
