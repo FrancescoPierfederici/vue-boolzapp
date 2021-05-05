@@ -90,6 +90,9 @@ body{
     width: 100%;
     background-image: url(mine.jpg);
     overflow: auto;
+    flex-direction:column;
+    align-items:flex-start;
+    display: flex;
    
    
  }
@@ -135,6 +138,9 @@ body{
 .img-containerTwo a{
     color: grey;
 }
+.flex{
+    display: flex;
+}
 .imgSize{
     width: 50px;
     height: 50px;
@@ -142,6 +148,11 @@ body{
     border: 1px solid rgba(128, 128, 128, 0.472);
    
  }
+.padd-bd{
+    padding: 10px 10px ;
+    border: 1px solid rgba(128, 128, 128, 0.109);
+    
+}
 .imgSize2{
     width: 50px;
     height: 50px;
@@ -214,4 +225,26 @@ body{
      align-items: center;
      padding-top:10px;
  }
- 
+ /* .containerMessage{
+     
+ } */
+ .message{
+     padding:20px;
+     border-radius:20px;
+     
+     margin-top: 10px;
+     display: inline-block;
+     flex-grow:0;
+ }
+ .received{
+     justify-content:flex-start;
+     display: flex;
+     margin-left:10px;
+     background-color:#EDEDED ;
+ }
+ .sent{
+     background-color: rgba(184, 236, 175, 0.993);
+     align-self:flex-end;
+     display: flex;
+     margin-right: 10px;
+ }

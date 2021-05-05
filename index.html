@@ -53,8 +53,15 @@
                     <input type="text" class="inputSearch " placeholder="Cerca o inizia una nuova chat">
                     <i class="fas fa-search search-absolute"></i>
                 </div>
-                <ul class="list-container">
-                    <li></li>
+                <ul class="list-container ">
+                    <li class="padd-bd flex" v-for="(user,index) in usersList" :key="user.id">
+                        <img class="imgSize" :src="'imgs/avatar'+ user.avatar + '.jpg'" alt="bhb">
+                        <div>
+                            <h4 style="padding-left:10px;padding-top:10px;">{{user.name }}</h4>
+                            <p style="padding-left: 10px;color: gray;">Non ci sono messaggi!</p>
+                        </div>
+
+                    </li>
                 </ul>
             </div>
 
@@ -80,22 +87,29 @@
 
 
                 </div>
-                <div class="message-background"></div>
+                <div class="message-background">
+                    <!-- <div class="containerMessage"> -->
+                        <div v-for="(user,index) in usersList" :key="user.id" class="message received">{{user.messages.text }}</div>
+                        <div class="message sent">fsdfsf</div>
+                    <!-- </div> -->
+
+                </div>
                 <div class="bottom-bar-right">
                     <div class="container-button-bar">
                         <i class="far fa-smile " style="color:grey"></i>
                         <input type="text" placeholder="Scrivi un messaggio">
-                        <i class="fas fa-microphone"style="color:grey"></i>
+                        <i class="fas fa-microphone" style="color:grey"></i>
                     </div>
                 </div>
             </div>
 
 
         </div>
+    </div>
 
 
-        <script src="scripts/data.js"></script>
-        <script src="scripts/app.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
 
 </html>
