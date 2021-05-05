@@ -16,5 +16,6 @@ const app = new Vue({
     },
     mounted(){
         this.activeChat = this.usersList[0];
+        // moment().format("DD/MM/YYYY HH:mm:ss")
     },
 })

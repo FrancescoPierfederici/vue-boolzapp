@@ -251,10 +251,12 @@ body{
      display: flex;
      margin-left:10px;
      background-color:#EDEDED ;
+     margin-right: 150px;
  }
  .sent{
      background-color: rgba(184, 236, 175, 0.993);
      align-self:flex-end;
      display: flex;
      margin-right: 10px;
+     margin-left:150px;
  }
