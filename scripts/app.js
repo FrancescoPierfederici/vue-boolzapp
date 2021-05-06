@@ -9,7 +9,7 @@ const app = new Vue({
         tempFilteredData: [],
         
     },
-    //JS RIPRESO DALLA LEZIONE
+    //JS RIPRESO DALLA LEZIONE(da riguardare)
     computed: {
         selectedUserLastAccess(){
 
@@ -25,7 +25,7 @@ const app = new Vue({
        onUserClick(user){
             this.activeChat = user;
         },
-        //JS RIPRESO DALLA LEZIONE
+        //JS RIPRESO DALLA LEZIONE(da riguardare)
         formatTime(stringDate){
             return moment(stringDate, "DD/MM/YYYY HH:mm:ss").format("HH:mm")
 
