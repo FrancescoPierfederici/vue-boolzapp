@@ -50,11 +50,12 @@
                 </div>
                 <div class="top-bar-leftThree relative">
 
-                    <input type="text" class="inputSearch " placeholder="Cerca o inizia una nuova chat">
+                    <input v-model="searchText" @input="onInput" type="text" class="inputSearch " placeholder="Cerca o inizia una nuova chat">
                     <i class="fas fa-search search-absolute"></i>
+                    <i class="fas fa-times search-absoluteTwo"></i>
                 </div>
                 <ul class="list-container ">
-                    <li class="padd-bd flex" :class="{ bgActive: user.avatar === activeChat.avatar}"
+                    <li class="padd-bd flex" :class="{bgActive: user.avatar === activeChat.avatar}"
                         v-for="(user,index) in usersList" :key="user.id " @click="onUserClick(user)">
                         <img class="imgSize" :src="'imgs/avatar'+ user.avatar + '.jfif'" alt="">
                         <div>
