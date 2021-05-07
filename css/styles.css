@@ -238,21 +238,7 @@ body{
      padding-top:10px;
  }
  
- .popup ul{
-     margin:0;
-     list-style: none;
-    
- }
- .popup ul li{
-     padding:5px 5px;
-     transition:backgrouns-color .3s;
-     cursor: pointer;
-     font-size: 10px;
-     
- }
- .popup ul li:hover{
-     background-color:lightgray
- }
+ 
  .time{
      position: absolute;
      color: rgb(185, 185, 185);
@@ -267,25 +253,7 @@ body{
  .bgActive{
      background-color: rgb(189, 184, 184);
  }
- .received{
-     justify-content:flex-start;
-     display: flex;
-     margin-left:20px;
-     background-color:#EDEDED ;
-     margin-right: 150px;
- }
- .sent{
-     background-color: rgba(184, 236, 175, 0.993);
-     align-self:flex-end;
-     display: flex;
-     margin-right: 20px;
-     margin-left:150px;
- }
-.sent .popup-activator{
-
-
-     right:4px;
- }
+ 
 
  
  /* .containerMessage{
@@ -301,12 +269,13 @@ body{
  }
  .popup-activator{
     position: absolute;
-    left:4px;
+    
     top:4px;
+    opacity:0.4;
  }
  .popup{
      position:absolute;
-     width:100px;
+     width:150px;
      border-radius: 4px;
      box-shadow:0 1px 4px rgba(0, 0, 0, 0.4);
      background-color:white;
@@ -314,7 +283,60 @@ body{
 
  }
 
+.popup ul{
+     margin:0;
+     list-style: none;
+    
+ }
+ .popup ul li{
+     padding:5px 5px;
+     transition:backgrouns-color .3s;
+     cursor: pointer;
+     font-size: 12px;
+     
+ }
+ .popup ul li:hover{
+     background-color:rgba(219, 217, 217, 0.678)
+ }
+
+.received{
+     justify-content:flex-start;
+     display: flex;
+     margin-left:20px;
+     background-color:#EDEDED ;
+     margin-right: 150px;
+ }
+ .received:after{
+    left:-14px;
+    transform:rotate(90deg);
+    border-color:#ffffff transparent transparent transparent;   
+
+ }
+ .sent{
+     background-color: rgba(184, 236, 175, 0.993);
+     align-self:flex-end;
+     display: flex;
+     margin-right: 20px;
+     margin-left:150px;
+ }
+ .sent:after{
+    right:-14px;
+    border-color:#dcf8c6 transparent transparent transparent;
+ }
+.sent .popup-activator{
 
 
-
+     right:4px;
+ }
+ .sent .popup{
+     top:16px;
+     right:8px;
+ }
+ .received .popup-activator{
+     left:4px;
+ }
+ .received .popup{
+     top:16px;
+     left:8px;
+ }
 
