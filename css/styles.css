@@ -241,11 +241,14 @@ body{
  .popup ul{
      margin:0;
      list-style: none;
+    
  }
  .popup ul li{
-     padding:14px 14px;
+     padding:5px 5px;
      transition:backgrouns-color .3s;
      cursor: pointer;
+     font-size: 10px;
+     
  }
  .popup ul li:hover{
      background-color:lightgray
@@ -267,7 +270,7 @@ body{
  .received{
      justify-content:flex-start;
      display: flex;
-     margin-left:10px;
+     margin-left:20px;
      background-color:#EDEDED ;
      margin-right: 150px;
  }
@@ -275,13 +278,13 @@ body{
      background-color: rgba(184, 236, 175, 0.993);
      align-self:flex-end;
      display: flex;
-     margin-right: 10px;
+     margin-right: 20px;
      margin-left:150px;
  }
 .sent .popup-activator{
 
 
-     right:2px;
+     right:4px;
  }
 
  
@@ -303,11 +306,11 @@ body{
  }
  .popup{
      position:absolute;
-     width:180px;
+     width:100px;
      border-radius: 4px;
      box-shadow:0 1px 4px rgba(0, 0, 0, 0.4);
      background-color:white;
-     
+      z-index:1;
 
  }
 
