@@ -237,16 +237,18 @@ body{
      align-items: center;
      padding-top:10px;
  }
- /* .containerMessage{
-     
- } */
- .message{
-     padding:15px;
-     border-radius:15px;
-     position: relative;
-     margin-top: 10px;
-     display: inline-block;
-     flex-grow:0;
+ 
+ .popup ul{
+     margin:0;
+     list-style: none;
+ }
+ .popup ul li{
+     padding:14px 14px;
+     transition:backgrouns-color .3s;
+     cursor: pointer;
+ }
+ .popup ul li:hover{
+     background-color:lightgray
  }
  .time{
      position: absolute;
@@ -276,3 +278,40 @@ body{
      margin-right: 10px;
      margin-left:150px;
  }
+.sent .popup-activator{
+
+
+     right:2px;
+ }
+
+ 
+ /* .containerMessage{
+     
+ } */
+ .message{
+     padding:15px;
+     border-radius:15px;
+     position: relative;
+     margin-top: 10px;
+     display: inline-block;
+     flex-grow:0;
+ }
+ .popup-activator{
+    position: absolute;
+    left:4px;
+    top:4px;
+ }
+ .popup{
+     position:absolute;
+     width:180px;
+     border-radius: 4px;
+     box-shadow:0 1px 4px rgba(0, 0, 0, 0.4);
+     background-color:white;
+     
+
+ }
+
+
+
+
+

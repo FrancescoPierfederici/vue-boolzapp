@@ -50,13 +50,13 @@
                 </div>
                 <div class="top-bar-leftThree relative">
 
-                   
+
                     <i class="fas fa-search search-absolute"></i>
-                     <input v-model="searchText" @input="onInput" type="text" class="inputSearch "
+                    <input v-model="searchText" @input="onInput" type="text" class="inputSearch "
                         placeholder="Cerca o inizia una nuova chat">
-                    
-                    <i class="fas fa-times search-absoluteTwo btn-active" v-if="searchText" @click = "searchText=''"></i>
-                   
+
+                    <i class="fas fa-times search-absoluteTwo btn-active" v-if="searchText" @click="searchText=''"></i>
+
 
                 </div>
                 <ul class="list-container ">
@@ -97,10 +97,21 @@
                 </div>
                 <div class="message-background" ref="chatContainerToScroll">
                     <!-- <div class="containerMessage"> -->
+                        
                     <div class="message "
                         :class="{received: message.status === 'received', sent: message.status === 'sent' } "
                         v-for="(message,index) in activeChat.messages  " :key="index"> {{message.text}}
                         <div class="time">{{ formatTime(message.date) }} </div>
+
+                        <i class="fas fa-chevron-down popup-activator"></i>
+
+                        <div class="popup">
+                            <ul>
+                                <li>Info Messaggio</li>
+                                <li>Cancella Messaggio</li>
+
+                            </ul>
+                        </div>
                     </div>
 
 
@@ -112,7 +123,7 @@
                         <i class="far fa-smile " style="color:grey"></i>
                         <!-- SE NON SCRIVEVO IL V-MODEL NON STAMPAVA I MESSAGGI SULLA CHAT -->
                         <input type="text" placeholder="Scrivi un messaggio" v-model="newMsgText"
-                        @keyup.enter="sendMessage" @focusin="showSendIcon = true"  @focusout="showSendIcon">
+                            @keyup.enter="sendMessage" @focusin="showSendIcon = true" @focusout="showSendIcon">
                         <i class="fas fa-microphone" style="color:grey"></i>
                     </div>
                 </div>
