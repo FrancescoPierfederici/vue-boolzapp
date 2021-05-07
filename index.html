@@ -50,13 +50,18 @@
                 </div>
                 <div class="top-bar-leftThree relative">
 
-                    <input v-model="searchText" @input="onInput" type="text" class="inputSearch " placeholder="Cerca o inizia una nuova chat">
+                   
                     <i class="fas fa-search search-absolute"></i>
-                    <i class="fas fa-times search-absoluteTwo"></i>
+                     <input v-model="searchText" @input="onInput" type="text" class="inputSearch "
+                        placeholder="Cerca o inizia una nuova chat">
+                    
+                    <i class="fas fa-times search-absoluteTwo btn-active" v-if="searchText" @click = "searchText=''"></i>
+                   
+
                 </div>
                 <ul class="list-container ">
                     <li class="padd-bd flex" :class="{bgActive: user.avatar === activeChat.avatar}"
-                        v-for="(user,index) in usersList" :key="user.id " @click="onUserClick(user)">
+                        v-for="(user,index) in filteredUserList" :key="index " @click="onUserClick(user)">
                         <img class="imgSize" :src="'imgs/avatar'+ user.avatar + '.jfif'" alt="">
                         <div>
                             <h4 style="padding-left:10px;padding-top:10px;">{{user.name }}</h4>
@@ -80,8 +85,8 @@
 
                         <div class="flex-grow"></div>
                         <div class="icons-container">
-                            <i class="fas fa-circle-notch" style="color: grey;"></i>
-                            <i class="fas fa-comment-alt" style="color: grey;"></i>
+                            <i class="fas fa-search  " style="color: grey;"></i>
+                            <i class="fas fa-paperclip" style="color: grey;"></i>
                             <i class="fas fa-ellipsis-v" style="color: grey;"></i>
                         </div>
                     </div>
@@ -90,7 +95,7 @@
 
 
                 </div>
-                <div class="message-background">
+                <div class="message-background" ref="chatContainerToScroll">
                     <!-- <div class="containerMessage"> -->
                     <div class="message "
                         :class="{received: message.status === 'received', sent: message.status === 'sent' } "
@@ -105,7 +110,9 @@
                 <div class="bottom-bar-right">
                     <div class="container-button-bar">
                         <i class="far fa-smile " style="color:grey"></i>
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <!-- SE NON SCRIVEVO IL V-MODEL NON STAMPAVA I MESSAGGI SULLA CHAT -->
+                        <input type="text" placeholder="Scrivi un messaggio" v-model="newMsgText"
+                        @keyup.enter="sendMessage" @focusin="showSendIcon = true"  @focusout="showSendIcon">
                         <i class="fas fa-microphone" style="color:grey"></i>
                     </div>
                 </div>

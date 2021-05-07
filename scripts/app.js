@@ -37,21 +37,29 @@ const app = new Vue({
                 status: 'sent'
             };
             const currentUser = this.activeChat;
-            currentUser.messages.push(newMessage)
+            currentUser.messages.push(newMessage);
             this.newMsgText="";
             this.scrollToBottom();
 
             setTimeout( ()=>{
                 const newRespMsg = {
                 date:moment().format("DD/MM/YYYY  HH:mm:ss"),
-                text: "Ok",
+                text: "Ok da " + currentUser.name,
                 status: 'received'
                 };
-                currentUser.activeChat.messages.push(newRespMsg);
+                currentUser.messages.push(newRespMsg);
                 this.scrollToBottom();
-            },5000);
+            },1000);
         },
-        //scrollToBottom()
+        //COSA FA QUESTA FUNZIONE? 
+        scrollToBottom(){
+            this.$nextTick(()=> {
+                 const htmlElement=this.$refs.chatContainerToScroll
+                 htmlElement.scrollTop = htmlElement.crollHeight
+            })
+           
+            
+        },
         onInput(){
             console.log("input");
         }

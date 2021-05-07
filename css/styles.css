@@ -255,6 +255,10 @@ body{
      font-size: 8px;
      right:10px;
  }
+ .btn-active:hover{
+    color: gray;
+    cursor: pointer;
+ }
  .bgActive{
      background-color: rgb(189, 184, 184);
  }
