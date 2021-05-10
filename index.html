@@ -65,7 +65,7 @@
                         <img class="imgSize" :src="'imgs/avatar'+ user.avatar + '.jfif'" alt="">
                         <div>
                             <h4 style="padding-left:10px;padding-top:10px;">{{user.name }}</h4>
-                            <p style="padding-left: 10px;color: gray;">Non ci sono messaggi!</p>
+                            <p style="padding-left: 10px;color: gray;">{{ getLastMsgString(user.messages)}} </p>
                         </div>
 
                     </li>
@@ -97,18 +97,18 @@
                 </div>
                 <div class="message-background" ref="chatContainerToScroll">
                     <!-- <div class="containerMessage"> -->
-                        
+
                     <div class="message "
                         :class="{received: message.status === 'received', sent: message.status === 'sent' } "
-                        v-for="(message,index) in activeChat.messages  " :key="index"> {{message.text}}
+                        v-for="(message,index) in activeChat.messages  " :key="index" tabindex="-1" @click="onMesgClick(message, $event)" @blur="onFocusLost(message)"> {{message.text}}
                         <div class="time">{{ formatTime(message.date) }} </div>
 
                         <i class="fas fa-chevron-down popup-activator"></i>
 
-                        <div class="popup">
+                        <div class="popup" v-if="message.showPopup"@click.stop="onPopupClick(message)">
                             <ul>
-                                <li>Info Messaggio</li>
-                                <li>Cancella Messaggio</li>
+                                <li >Info Messaggio</li>
+                                <li @click="onDeleteClick(index)">Cancella Messaggio</li>
 
                             </ul>
                         </div>

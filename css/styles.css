@@ -269,9 +269,9 @@ body{
  }
  .popup-activator{
     position: absolute;
-    
+    transition:opacity 0.3s;
     top:4px;
-    opacity:0.4;
+    opacity:0;
  }
  .popup{
      position:absolute;
@@ -279,7 +279,7 @@ body{
      border-radius: 4px;
      box-shadow:0 1px 4px rgba(0, 0, 0, 0.4);
      background-color:white;
-      z-index:1;
+      z-index:10;
 
  }
 
@@ -287,6 +287,10 @@ body{
      margin:0;
      list-style: none;
     
+ }
+ .message:hover .popup-activator{
+     opacity:0.4
+
  }
  .popup ul li{
      padding:5px 5px;
